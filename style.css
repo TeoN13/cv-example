@@ -1,0 +1,168 @@
+:root {
+  --detail-height: 20vh;
+  --person-background-color: #b2ebf2;
+  /* photo and name */
+  --details-background-color: #0288d1;
+  /* banner */
+  --main-background-color: #4fc3f7;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  font-family: Merriweather, serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#details {
+  height: var(--detail-height);
+  width: 100%;
+  background-color: var(--details-background-color);
+}
+
+#person {
+  height: 140%;
+  /* 100% + bottom x 2 */
+  width: 40%;
+  border-radius: 0% 15% 15% 0%;
+  background-color: var(--person-background-color);
+  position: relative;
+  bottom: -20%;
+  border: solid 1px;
+  z-index: 1;
+}
+
+#photo {
+  height: 98%;
+  width: 50%;
+  border: solid 1px #b3e5fc;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 50%;
+  background-image: url("https://i.imgur.com/dmhM78H.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#name {
+  height: 100%;
+  width: 50%;
+  font-size: 3vw;
+  text-shadow: 1px 1px #78909c;
+}
+
+#contact {
+  border: dashed;
+  border-radius: 10%;
+  height: 90%;
+  width: 80%;
+  margin: 0% 1%;
+  gap: 1vw;
+}
+
+.contact-card {
+  height: 90%;
+  width: 30%;
+  border-radius: 5%;
+  position: relative;
+}
+
+.contact-card .front,
+.contact-card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-card .front {
+  background-color: rgba(37, 35, 35, 0.1);
+  border-radius: 45% 44% 15% 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contact-card .front .detail-icon {
+  height: 40%;
+  width: 40%;
+}
+
+.contact-card .front .detail-message {
+  text-shadow: 1px 1px #78909c;
+}
+
+.contact-card:hover .front {
+  opacity: 0;
+}
+
+.contact-card:hover .back {
+  opacity: 1;
+}
+
+.contact-card .back {
+  opacity: 0;
+  font-size: 2vw;
+}
+
+#container-main {
+  height: calc(100vh - var(--detail-height));
+  width: 100%;
+  background-color: var(--main-background-color);
+}
+
+#projects {
+  width: 20%;
+  height: 100%;
+  background-color: rgba(35, 35, 35, 0.3);
+  border: solid 1px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#projects-message {
+  text-align: center;
+  width: 80%;
+}
+
+.project-icon {
+  height: 12vh;
+  padding: 1vh 0;
+}
+
+#myCarousel {
+  border: dashed;
+  height: 95%;
+  width: 78%;
+  margin: 0 1%;
+  overflow: scroll;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-inner .item h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.slide-text {
+  font-size: min(max(14px, 1.8vw), 16px);
+  padding: 0% 1%;
+}
+
+.item {
+  margin-top: 3%;
+}
